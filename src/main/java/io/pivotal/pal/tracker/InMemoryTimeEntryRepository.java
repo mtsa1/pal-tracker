@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-@Repository
+
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     private HashMap<Long, TimeEntry> repository = new HashMap<Long, TimeEntry>();
