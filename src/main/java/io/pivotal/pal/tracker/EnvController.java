@@ -29,8 +29,12 @@ public class EnvController {
 
     @GetMapping("/env")
     public Map<String, String> getEnv(){
-        Map<String, String> environments = Map.of("PORT", port,"MEMORY_LIMIT",
-                memLimit,"CF_INSTANCE_INDEX", instanceIndex, "CF_INSTANCE_ADDR", instanceAddr);
+        Map<String, String> environments = new HashMap<String, String>();
+
+        environments.put("PORT", port);
+        environments.put("MEMORY_LIMIT", memLimit);
+        environments.put("CF_INSTANCE_INDEX", instanceIndex);
+        environments.put("CF_INSTANCE_ADDR", instanceAddr);
 
         return environments;
     }
